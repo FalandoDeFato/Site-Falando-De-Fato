@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link rel="stylesheet" href="css/teste.css">
+</head>
+
+<body>
+    <div class="containerPopup">
+        <button type="submit" class="botaoFinalizarCompra" onclick="openPopup()">Finalizar Compra</button>
+    </div>
+    <div class="popup" id="popup">
+        <img src="" alt="imagem de um check verificado" width="200px" height="200px">
+        <h2>Obrigada!</h2>
+        <p>A sua compra foi finalizada com sucesso</p>
+        <button class="pushable" onclick="closePopup()">
+            <span class="front">
+                Ok
+            </span>
+        </button>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup")
+
+        function openPopup() {
+            popup.classList.add("openPopup")
+        }
+
+        function closePopup() {
+            popup.classList.remove("openPopup")
+        }
+    </script>
+</body>
+
+</html>
